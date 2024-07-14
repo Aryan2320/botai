@@ -1,14 +1,13 @@
-
 import './App.css';
-import Chat from './componens/bot';
-
+import { ChatProvider } from './components/Chat';
+import ChatbotPage from './Pages';
 function App() {
   return (
-    <>
-    <div className="App" style={{width:"100%",backgroundColor:"lightblue" ,margin:'0px',padding:'0px' , height:"60px"}}>
-    <Chat/>
+    <div className="App">
+      <ChatProvider>
+        <ChatbotPage/>
+      </ChatProvider>
     </div>
-    </>
   );
 }
 
